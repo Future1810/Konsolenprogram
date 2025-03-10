@@ -12,21 +12,21 @@ class BankAccount {
       balance += amount;
       print('\n$owner hat $amount eingezahlt. Neuer Kontostand: $balance');
     } else {
-      print('\nUngültiger Betrag!');
+      print('Ungültiger Betrag!');
     }
   }
 
   void withdraw(double amount) {
     if (amount > 0 && amount <= balance) {
       balance -= amount;
-      print('\n$owner hat $amount abgehoben. Neuer Kontostand: $balance');
+      print('$owner hat $amount abgehoben. Neuer Kontostand: $balance');
     } else {
-      print('\nAbhebung nicht möglich!');
+      print('Abhebung nicht möglich!');
     }
   }
 
   void showBalance() {
-    print('\nKontoinhaber: $owner, Kontostand: $balance');
+    print('Kontoinhaber: $owner, Kontostand: $balance');
   }
 }
 
@@ -37,7 +37,7 @@ void main() {
   BankAccount account = BankAccount(owner);
 
   while (true) {
-    print('\nWählen Sie eine Aktion:');
+    print('Wählen Sie eine Aktion:');
     print('1: Einzahlen');
     print('2: Abheben');
     print('3: Kontostand anzeigen');
@@ -48,12 +48,12 @@ void main() {
     
     switch (choice) {
       case '1':
-        stdout.write('\nBetrag zum Einzahlen: ');
+        stdout.write('Betrag zum Einzahlen: ');
         double amount = double.parse(stdin.readLineSync()!);
         account.deposit(amount);
         break;
       case '2':
-        stdout.write('\nBetrag zum Abheben: ');
+        stdout.write('Betrag zum Abheben: ');
         double amount = double.parse(stdin.readLineSync()!);
         account.withdraw(amount);
         break;
@@ -61,10 +61,10 @@ void main() {
         account.showBalance();
         break;
       case '4':
-        print('\nProgramm beendet.');
+        print('Programm beendet.');
         return;
       default:
-        print('\nUngültige Auswahl!');
+        print('Ungültige Auswahl!');
     }
   }
 }
