@@ -10,7 +10,7 @@ class BankAccount {
   void deposit(double amount) {
     if (amount > 0) {
       balance += amount;
-      print('\n$owner hat $amount eingezahlt. Neuer Kontostand: $balance');
+      print('$owner hat $amount eingezahlt. Neuer Kontostand: $balance');
     } else {
       print('Ungültiger Betrag!');
     }
